@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "浏览器运行，添加grunt-contrib-connect"
+git commit -m "添加提交文件"
 
 git push
