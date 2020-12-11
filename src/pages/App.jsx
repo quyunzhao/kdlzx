@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
+import LoginPage from "./LoginPage";
 export default class App extends Component {
   render() {
-    return <div>顶级组件</div>;
+    return <LoginPage></LoginPage>;
   }
 }
 
