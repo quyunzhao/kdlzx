@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "init"
+git commit -m "css 初始化"
 
 git push
