@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "css 初始化"
+git commit -m "引入图片"
 
 git push
