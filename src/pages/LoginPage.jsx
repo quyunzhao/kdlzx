@@ -17,6 +17,7 @@ export class LoginPage extends Component {
           {/* 用户名输入框 */}
           <FormInput></FormInput>
           {/* 密码输入框 */}
+          <FormInput></FormInput>
         </form>
       </div>
     );
