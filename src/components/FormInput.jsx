@@ -6,9 +6,9 @@ export class FormInput extends Component {
     return (
       <div className="input-group">
         {/* 字体图标 */}
-        <i className="iconfont icon-shouji"></i>
+        <i className={"iconfont icon-" + this.props.iconClass}></i>
         {/* 输入框 */}
-        <input type="text" />
+        <input type={this.props.type} placeholder={this.props.placeholder} />
       </div>
     );
   }

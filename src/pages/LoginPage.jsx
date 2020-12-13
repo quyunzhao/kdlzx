@@ -15,9 +15,17 @@ export class LoginPage extends Component {
         {/* form 表单 */}
         <form action="#" className="login-form">
           {/* 用户名输入框 */}
-          <FormInput></FormInput>
+          <FormInput
+            type="text"
+            placeholder="用户名"
+            iconClass="shouji"
+          ></FormInput>
           {/* 密码输入框 */}
-          <FormInput></FormInput>
+          <FormInput
+            type="password"
+            placeholder="密码"
+            iconClass="Lock_icon"
+          ></FormInput>
         </form>
       </div>
     );
