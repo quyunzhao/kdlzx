@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "引入图片"
+git commit -m "图片组件"
 
 git push
