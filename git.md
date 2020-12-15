@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "homepage"
+git commit -m "antd-mobile"
 
 git push
