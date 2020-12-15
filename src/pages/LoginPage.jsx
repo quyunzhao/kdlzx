@@ -26,19 +26,20 @@ export class LoginPage extends Component {
             placeholder="用户名"
             iconClass="shouji"
           ></FormInput>
-
           {/* 2.密码输入框 */}
           <FormInput
             type="password"
             placeholder="密码"
             iconClass="Lock_icon"
           ></FormInput>
-
           {/* 3.登录按钮 */}
-          <FormBtn>登录</FormBtn>
-
+          <FormBtn isFull={true}>登录</FormBtn>
           {/* 4.忘记密码 */}
           <FormBtn type="ordinary">忘记密码</FormBtn>
+          {/* 5.免费注册 游客登录 */}
+          <FormBtn>免费注册</FormBtn>
+          &emsp;
+          <FormBtn>游客登录</FormBtn>
         </form>
       </div>
     );

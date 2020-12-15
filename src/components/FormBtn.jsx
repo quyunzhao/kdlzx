@@ -3,14 +3,15 @@ import "../assets/styles/FormBtn.less";
 
 export class FormBtn extends Component {
   render() {
-    return (
-      <div>
-        {this.props.type === "ordinary" ? (
-          <a href="###">{this.props.children}</a>
-        ) : (
-          <button className="btn">{this.props.children}</button>
-        )}
-      </div>
+    return this.props.type === "ordinary" ? (
+      <a href="###">{this.props.children}</a>
+    ) : (
+      // <button className={"btn " + this.props.isFull ? "full" : ""}>
+      //   {this.props.children}
+      // </button>
+      <button className={`btn ${this.props.isFull ? "full" : ""}`}>
+        {this.props.children}
+      </button>
     );
   }
 }
