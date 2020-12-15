@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../assets/styles/homePage.less";
 
 export class HomePage extends Component {
   render() {
