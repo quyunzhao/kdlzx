@@ -5,7 +5,11 @@ export class FormBtn extends Component {
   render() {
     return (
       <div>
-        <button>{this.props.children}</button>
+        {this.props.type === "ordinary" ? (
+          <a href="###">{this.props.children}</a>
+        ) : (
+          <button className="btn">{this.props.children}</button>
+        )}
       </div>
     );
   }

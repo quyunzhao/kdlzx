@@ -17,6 +17,7 @@ export class LoginPage extends Component {
       <div className="login-page">
         {/* 1 logo 图片 */}
         <Img src="logo.png"></Img>
+
         {/* form 表单 */}
         <form action="#" className="login-form">
           {/* 1.用户名输入框 */}
@@ -25,14 +26,19 @@ export class LoginPage extends Component {
             placeholder="用户名"
             iconClass="shouji"
           ></FormInput>
+
           {/* 2.密码输入框 */}
           <FormInput
             type="password"
             placeholder="密码"
             iconClass="Lock_icon"
           ></FormInput>
+
           {/* 3.登录按钮 */}
           <FormBtn>登录</FormBtn>
+
+          {/* 4.忘记密码 */}
+          <FormBtn type="ordinary">忘记密码</FormBtn>
         </form>
       </div>
     );
