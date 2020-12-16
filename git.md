@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "antd-mobile"
+git commit -m "顶部导航栏"
 
 git push

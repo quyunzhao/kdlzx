@@ -7,6 +7,7 @@ export default class Img extends Component {
         <img
           src={require("../assets/images/" + this.props.src).default}
           alt=""
+          height={this.props.height}
         />
       </div>
     );
