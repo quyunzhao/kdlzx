@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "tab 栏"
+git commit -m "小列表"
 
 git push

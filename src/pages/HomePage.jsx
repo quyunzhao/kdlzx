@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Flex, Tabs } from "antd-mobile";
+import { Flex, Tabs, List } from "antd-mobile";
 
 import "../assets/styles/homePage.less";
 
@@ -40,6 +40,8 @@ const sub_list_data = [
 ];
 
 const tabs = [{ title: "产品" }, { title: "出行" }, { title: "深度" }];
+
+const Item = List.Item;
 export class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -82,12 +84,37 @@ export class HomePage extends Component {
 
         {/* Tab 栏 */}
         <div className="tab">
-          <Tabs tabs={tabs} initialPage={2} animated={false} useOnPan={false}>
-            <div>Content of first tab</div>
+          <Tabs tabs={tabs} initialPage={0} animated={false} useOnPan={false}>
+            <div>
+              <Item arrow="horizontal" onClick={() => {}}>
+                一般由主要信息、主要操作、次要信息、次要操作组成。
+              </Item>
+              <Item arrow="horizontal" onClick={() => {}}>
+                一般由主要信息、主要操作、次要信息、次要操作组成。
+              </Item>
+              <Item arrow="horizontal" onClick={() => {}}>
+                一般由主要信息、主要操作、次要信息、次要操作组成。
+              </Item>
+              <Item arrow="horizontal" onClick={() => {}}>
+                一般由主要信息、主要操作、次要信息、次要操作组成。
+              </Item>
+              <Item arrow="horizontal" onClick={() => {}}>
+                一般由主要信息、主要操作、次要信息、次要操作组成。
+              </Item>
+            </div>
             <div>Content of second tab</div>
             <div>Content of third tab</div>
           </Tabs>
         </div>
+
+        {/* 小列表 */}
+        {/* <div className="list">
+          <List>
+            <Item arrow="horizontal" onClick={() => {}}>
+              Title
+            </Item>
+          </List>
+        </div> */}
       </div>
     );
   }
