@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "顶部导航栏"
+git commit -m "轮播图"
 
 git push
