@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "subject"
+git commit -m "tab 栏"
 
 git push

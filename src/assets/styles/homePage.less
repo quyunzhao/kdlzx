@@ -1,3 +1,50 @@
+@import "./global.less";
+
 .home-page {
   background-color: #fff;
+
+  .sub-list {
+    h3,
+    p {
+      margin: 0;
+    }
+
+    padding: 15px 15px 0;
+    border-top: 1px solid #ddd;
+
+    .sub-list-header {
+      font-size: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+
+    .sub-list-item {
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+    }
+
+    .sub-list-item-left {
+      flex: 0 1 auto;
+    }
+
+    img {
+      display: block;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      // .max-line(1);
+    }
+
+    p {
+      line-height: 1.666em;
+      // .max-line(2);
+    }
+  }
+
+  .tab {
+    .am-tabs-tab-bar-wrap {
+      font-size: 18px;
+    }
+  }
 }

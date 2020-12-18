@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Flex } from "antd-mobile";
+import { Flex, Tabs } from "antd-mobile";
 
 import "../assets/styles/homePage.less";
 
@@ -38,6 +38,8 @@ const sub_list_data = [
       "Python 语言与 Perl，C 和 Java 等语言有许多相似之处。但是，也存在一些差异。",
   },
 ];
+
+const tabs = [{ title: "产品" }, { title: "出行" }, { title: "深度" }];
 export class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -51,10 +53,13 @@ export class HomePage extends Component {
       <div className="home-page">
         {/* 头部搜索 */}
         <Header></Header>
+
         {/* 轮播图 */}
         <Banner></Banner>
+
         {/* 学科导航 */}
         <Subject></Subject>
+
         {/* 小列表 */}
         <div className="sub-list">
           <div className="sub-list-header">相关资讯</div>
@@ -62,7 +67,7 @@ export class HomePage extends Component {
             return (
               <div className="sub-list-item" key={index}>
                 <Flex>
-                  <Flex.Item>
+                  <Flex.Item className="sub-list-item-left">
                     <Img src={val.img} height={80}></Img>
                   </Flex.Item>
                   <Flex.Item>
@@ -73,6 +78,15 @@ export class HomePage extends Component {
               </div>
             );
           })}
+        </div>
+
+        {/* Tab 栏 */}
+        <div className="tab">
+          <Tabs tabs={tabs} initialPage={2} animated={false} useOnPan={false}>
+            <div>Content of first tab</div>
+            <div>Content of second tab</div>
+            <div>Content of third tab</div>
+          </Tabs>
         </div>
       </div>
     );
