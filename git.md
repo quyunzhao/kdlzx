@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "轮播图"
+git commit -m "subject"
 
 git push
