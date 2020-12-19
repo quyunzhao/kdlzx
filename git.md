@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "列表页面样式抽离"
+git commit -m "详情页"
 
 git push

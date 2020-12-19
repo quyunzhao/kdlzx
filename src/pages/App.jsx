@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 // import LoginPage from "./LoginPage";
 // import HomePage from "./HomePage";
-import ListPage from "./ListPage";
+// import ListPage from "./ListPage";
+import DetailPage from "./DetailPage";
 
 export default class App extends Component {
   render() {
@@ -10,7 +11,8 @@ export default class App extends Component {
       <div>
         {/* <LoginPage></LoginPage> */}
         {/* <HomePage></HomePage> */}
-        <ListPage></ListPage>
+        {/* <ListPage></ListPage> */}
+        <DetailPage></DetailPage>
       </div>
     );
   }
