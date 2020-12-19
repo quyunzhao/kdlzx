@@ -1,21 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
+
 import ReactDOM from "react-dom";
-// import LoginPage from "./LoginPage";
-// import HomePage from "./HomePage";
-// import ListPage from "./ListPage";
+
+import { Router, Route, hashHistory } from "react-router";
+
+import LoginPage from "./LoginPage";
+import HomePage from "./HomePage";
+import ListPage from "./ListPage";
 import DetailPage from "./DetailPage";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        {/* <LoginPage></LoginPage> */}
-        {/* <HomePage></HomePage> */}
-        {/* <ListPage></ListPage> */}
-        <DetailPage></DetailPage>
-      </div>
-    );
-  }
-}
+// 定义路由
+const appRouter = (
+  <Router history={hashHistory}>
+    {/* 登录 */}
+    <Route path="/" component={LoginPage}></Route>
+    {/* 首页 */}
+    <Route path="/home" component={HomePage}></Route>
+    {/* 列表 */}
+    <Route path="/list" component={ListPage}></Route>
+    {/* 详情页 */}
+    <Route path="/detail" component={DetailPage}></Route>
+  </Router>
+);
 
-ReactDOM.render(<App></App>, document.getElementById("root"));
+ReactDOM.render(appRouter, document.getElementById("root"));
