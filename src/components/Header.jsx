@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { NavBar, SearchBar } from "antd-mobile/dist/antd-mobile.min";
+
 import Img from "../components/Img";
 import "../assets/styles/header.less";
+
 export default class Header extends Component {
   render() {
     return (

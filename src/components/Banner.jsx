@@ -40,6 +40,7 @@ export default class App extends React.Component {
               src={val}
               alt=""
               style={{ width: "100%", verticalAlign: "top" }}
+              height={200}
               onLoad={() => {
                 // fire window resize event to change height
                 window.dispatchEvent(new Event("resize"));
