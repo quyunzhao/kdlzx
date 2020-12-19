@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "详情页列表组件抽离"
+git commit -m "热门评论"
 
 git push

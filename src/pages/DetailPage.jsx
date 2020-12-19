@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Flex } from "antd-mobile";
 
 import "../assets/fonts/iconfont.css";
 import "../assets/styles/detailPage.less";
@@ -50,8 +51,54 @@ export default class DetailPage extends Component {
           </p>
         </article>
 
-        {/* 小列表 */}
+        {/* 相关资讯---小列表 */}
         <SubList></SubList>
+
+        {/* 热门评论 */}
+        <div className="comments">
+          <div className="comments-header">热门评论</div>
+          <Flex>
+            <Flex.Item className="comments-left">
+              <Img src="hpic3289.jpg" height={50}></Img>
+            </Flex.Item>
+            <Flex.Item className="comments-right">
+              <p>
+                <strong>吃鱼的猫</strong>
+                <span style={{ float: "right" }}>
+                  3
+                  <i
+                    className="iconfont icon-shouji"
+                    style={{ marginLeft: "6px" }}
+                  ></i>
+                </span>
+              </p>
+              <p className="comments-content">
+                据悉，中国老科学技术工作者协会2020年授予了20个组织老科学技术工作者协会先进集体奖、10名同志中国老科学技术工作者协会“突出贡献奖”、176名同志中国老科协技术工作者协会奖。
+              </p>
+            </Flex.Item>
+          </Flex>
+          {/* 评论2 */}
+          <Flex>
+            <Flex.Item className="comments-left">
+              <Img src="bpic22021_s.jpg" height={50}></Img>
+            </Flex.Item>
+            <Flex.Item className="comments-right">
+              <p>
+                <strong>会飞的小狗</strong>
+                <span style={{ float: "right" }}>
+                  5
+                  <i
+                    className="iconfont icon-shouji"
+                    style={{ marginLeft: "6px" }}
+                  ></i>
+                </span>
+              </p>
+              <p className="comments-content">
+                12月18日下午，离退休党总支在雁塔校区田径场举办了党员活动日之“众志成城，防疫抗疫”健步走活动。
+              </p>
+            </Flex.Item>
+          </Flex>
+        </div>
       </div>
     );
   }
