@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, WingBlank } from "antd-mobile";
+import { Carousel } from "antd-mobile";
 
 import banner1 from "../assets/images/banner1.jpg";
 import banner2 from "../assets/images/banner2.jpg";
