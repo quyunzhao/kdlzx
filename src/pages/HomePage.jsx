@@ -8,6 +8,7 @@ import Img from "../components/Img";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Subject from "../components/Subject";
+import SubListItem from "../components/SubListItem";
 
 const sub_list_data = [
   {
@@ -68,16 +69,8 @@ export class HomePage extends Component {
           <div className="sub-list-header">相关资讯</div>
           {this.state.sub_list_data.map((val, index) => {
             return (
-              <div className="sub-list-item" key={index}>
-                <Flex>
-                  <Flex.Item className="sub-list-item-left">
-                    <Img src={val.img} height={80}></Img>
-                  </Flex.Item>
-                  <Flex.Item>
-                    <h3>{val.title}</h3>
-                    <p>{val.des}</p>
-                  </Flex.Item>
-                </Flex>
+              <div key={index}>
+                <SubListItem {...val} />
               </div>
             );
           })}

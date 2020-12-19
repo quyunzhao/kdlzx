@@ -2,21 +2,24 @@ import React, { Component } from "react";
 
 import { ListView } from "antd-mobile";
 
+import SubListItem from "./SubListItem";
+
 const data = [
   {
     img: "dKbkpPXKfvZzWCM.png",
     title: "Meet hotel",
-    des: "不是所有的兼职汪都需要风吹日晒",
+    des: "适用于显示同类的长列表数据类型，对渲染性能有一定的优化效果。",
   },
   {
     img: "hfVtzEhPzTUewPm.png",
-    title: "McDonald's invites you",
-    des: "不是所有的兼职汪都需要风吹日晒",
+    title: "renderSectionHeader",
+    des: "如果提供了此函数，会为每个小节(section)渲染一个标题",
   },
   {
     img: "XmwCzSeJiqpkuMB.png",
-    title: "Eat the week",
-    des: "不是所有的兼职汪都需要风吹日晒",
+    title: "horizontal",
+    des:
+      "当此属性为true的时候，所有的的子视图会在水平方向上排成一行，而不是默认的在垂直方向上排成一列",
   },
 ];
 
@@ -44,8 +47,8 @@ export default class MyListView extends Component {
     }, 600);
   }
 
-  renderRow() {
-    return <p>lll</p>;
+  renderRow(val) {
+    return <SubListItem {...val} />;
   }
 
   render() {
