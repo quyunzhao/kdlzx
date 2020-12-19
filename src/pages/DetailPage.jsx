@@ -5,6 +5,7 @@ import "../assets/styles/detailPage.less";
 
 import Header from "../components/Header";
 import Img from "../components/Img";
+import SubList from "../components/SubList";
 
 export default class DetailPage extends Component {
   render() {
@@ -48,6 +49,9 @@ export default class DetailPage extends Component {
             </span>
           </p>
         </article>
+
+        {/* 小列表 */}
+        <SubList></SubList>
       </div>
     );
   }
