@@ -214,10 +214,10 @@ export class HomePage extends Component {
         {/* 首页尾部完成 */}
         <Header isFooter></Header>
         <div className="footer">
-          <p>Copyright © ICP 证浙 B2-2-100257</p>
-          <p>蚂蚁金融服务集团</p>
+          <p>Copyright © ICP 证浙 BX-X-100000</p>
+          <p>XXX金融服务集团</p>
           <p>关于</p>
-          <p>地址：北京市海淀区长安大厦A座14层14012号</p>
+          <p>地址：北京市海淀区XXX大厦XXX座XXX层14012号</p>
         </div>
       </div>
     );
