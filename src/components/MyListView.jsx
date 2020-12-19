@@ -23,6 +23,18 @@ const data = [
   },
 ];
 
+const NUM_ROWS = 10;
+let pageIndex = 0;
+
+function genData(pIndex = 0) {
+  const dataBlob = {};
+  for (let i = 0; i < NUM_ROWS; i++) {
+    const ii = pIndex * NUM_ROWS + i;
+    dataBlob[`${ii}`] = `row - ${ii}`;
+  }
+  return dataBlob;
+}
+
 export default class MyListView extends Component {
   constructor(props) {
     super(props);
@@ -39,31 +51,57 @@ export default class MyListView extends Component {
   componentDidMount() {
     //模拟 Ajax 请求
     setTimeout(() => {
-      // this.rData = genData();
+      this.rData = genData();
       this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(data),
+        dataSource: this.state.dataSource.cloneWithRows(this.rData),
         isLoading: false,
       });
     }, 600);
   }
 
-  renderRow(val) {
-    return <SubListItem {...val} />;
-  }
+  // renderRow(val) {
+  //   return <SubListItem {...val} />;
+  // }
+
+  onEndReached = (event) => {
+    // load new data
+    // hasMore: from backend data, indicates whether it is the last page, here is false
+    if (this.state.isLoading && !this.state.hasMore) {
+      return;
+    }
+    console.log("reach end", event);
+    this.setState({ isLoading: true });
+    setTimeout(() => {
+      this.rData = { ...this.rData, ...genData(++pageIndex) };
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows(this.rData),
+        isLoading: false,
+      });
+    }, 1000);
+  };
 
   render() {
+    let index = data.length - 1;
+    const row = (rowData, sectionID, rowID) => {
+      if (index < 0) {
+        index = data.length - 1;
+      }
+      const obj = data[index--];
+      return <SubListItem {...obj} />;
+    };
+
     return (
       <div>
         <ListView
           dataSource={this.state.dataSource}
           // renderHeader={() => <span>header</span>}
 
-          // renderFooter={() => (
-          //   <div style={{ padding: 30, textAlign: "center" }}>
-          //     {this.state.isLoading ? "Loading..." : "Loaded"}
-          //   </div>
-          // )}
-          renderRow={this.renderRow}
+          renderFooter={() => (
+            <div style={{ padding: 30, textAlign: "center" }}>
+              {this.state.isLoading ? "加载中..." : "Loaded"}
+            </div>
+          )}
+          renderRow={row}
           // renderSeparator={separator}
           className="am-list"
           // pageSize={4}
@@ -72,7 +110,7 @@ export default class MyListView extends Component {
           //   console.log("scroll");
           // }}
           // scrollRenderAheadDistance={500}
-          // onEndReached={this.onEndReached}
+          onEndReached={this.onEndReached}
           // onEndReachedThreshold={10}
         />
       </div>
