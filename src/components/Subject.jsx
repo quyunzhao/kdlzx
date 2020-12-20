@@ -28,12 +28,13 @@ export default class Subject extends Component {
   render() {
     return (
       <div className="subject">
+        {/* 第一行 */}
         <Flex>
           {this.state.subject_data.map((v, k) => {
             if (k < 4) {
               return (
                 <Flex.Item key={v.id}>
-                  <a href="#/list">
+                  <a href={"#/list/" + v.id}>
                     <i style={{ backgroundPositionX: -50 * k }}></i>
                     <p>{v.subjectName}</p>
                   </a>
@@ -42,37 +43,15 @@ export default class Subject extends Component {
             }
             return "";
           })}
-          {/* <Flex.Item>
-            <a href="#/list">
-              <i></i>
-              <p>Java EE</p>
-            </a>
-          </Flex.Item>
-          <Flex.Item>
-            <a href="#/list">
-              <i style={{ backgroundPositionX: -50 * 1 }}></i>
-              <p>全栈UX设计</p>
-            </a>
-          </Flex.Item>
-          <Flex.Item>
-            <a href="#/list">
-              <i style={{ backgroundPositionX: -50 * 2 }}></i>
-              <p>H5前端</p>
-            </a>
-          </Flex.Item>
-          <Flex.Item>
-            <a href="#/list">
-              <i style={{ backgroundPositionX: -50 * 3 }}></i>
-              <p>Python</p>
-            </a>
-          </Flex.Item> */}
         </Flex>
+
+        {/* 第二行 */}
         <Flex>
           {this.state.subject_data.map((v, k) => {
             if (k > 3) {
               return (
                 <Flex.Item key={v.id}>
-                  <a href="#/list">
+                  <a href={"#/list/" + v.id}>
                     <i style={{ backgroundPositionX: -50 * k }}></i>
                     <p>{v.subjectName}</p>
                   </a>
@@ -81,24 +60,7 @@ export default class Subject extends Component {
             }
             return "";
           })}
-          {/* <Flex.Item>
-            <a href="#/list">
-              <i style={{ backgroundPositionX: -50 * 4 }}></i>
-              <p>ios</p>
-            </a>
-          </Flex.Item>
-          <Flex.Item>
-            <a href="#/list">
-              <i style={{ backgroundPositionX: -50 * 5 }}></i>
-              <p>大数据</p>
-            </a>
-          </Flex.Item>
-          <Flex.Item>
-            <a href="#/list">
-              <i style={{ backgroundPositionX: -50 * 6 }}></i>
-              <p>c++</p>
-            </a>
-          </Flex.Item> */}
+
           <Flex.Item></Flex.Item>
         </Flex>
       </div>

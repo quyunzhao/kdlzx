@@ -6,6 +6,13 @@ import Header from "../components/Header";
 import MyListView from "../components/MyListView";
 
 export default class ListPage extends Component {
+  componentDidMount() {
+    // 发送请求
+    // 根据从 URL 传进来的 subjectId 值（ infoname 参数），像后端发起请求
+    const subjectId = this.props.routeParams.subjectId;
+    console.log(subjectId);
+  }
+
   render() {
     return (
       <div className="list-page">

@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "subject 数据的渲染"
+git commit -m "路由传值"
 
 git push

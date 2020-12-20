@@ -17,7 +17,7 @@ const appRouter = (
     {/* 首页 */}
     <Route path="/home" component={HomePage}></Route>
     {/* 列表 */}
-    <Route path="/list" component={ListPage}></Route>
+    <Route path="/list/:subjectId" component={ListPage}></Route>
     {/* 详情页 */}
     <Route path="/detail" component={DetailPage}></Route>
   </Router>
