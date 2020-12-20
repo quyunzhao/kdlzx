@@ -1,8 +1,10 @@
 // 入口文件，在项目中相当于清单
 // 引入核心组件
-import "./pages/App";
+// import "./pages/App";
+
 // 测试组件
 // import "./test/testBtn";
+import "./test/text2Redux";
 
 // 引入初始化样式
 import "normalize.css";

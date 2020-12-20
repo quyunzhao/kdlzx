@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "路由传值"
+git commit -m "redux 介绍"
 
 git push
