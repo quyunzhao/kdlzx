@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "axios 发起请求"
+git commit -m "subject 数据的渲染"
 
 git push
