@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "登录页受控组件"
+git commit -m "axios 发起请求"
 
 git push

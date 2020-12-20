@@ -69,8 +69,20 @@ export class LoginPage extends Component {
         Toast.success(response.data.msg, 1);
         // 跳转到首页
         this.props.router.push("/home");
+      } else {
+        Toast.fail(response.data.msg, 1);
       }
     });
+
+    // post 请求
+    // 发起登录请求
+    // axios.post("/server/data.json", params).then((response) => {
+    //   if (response.data && response.data.succeed) {
+    //     Toast.success(response.data.msg, 1);
+    //     // 跳转到首页
+    //     this.props.router.push("/home");
+    //   }
+    // });
   };
 
   render() {
