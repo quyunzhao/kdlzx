@@ -47,7 +47,7 @@ export default class Header extends Component {
             onLeftClick={() => window.history.back()}
           >
             <a href="#/home">
-              <Img src="logo.png" key="0" height={30} />
+              <Img src="logo.png" height={30} />
             </a>
           </NavBar>
         ) : (
@@ -56,8 +56,8 @@ export default class Header extends Component {
               this.props.isFooter ? (
                 ""
               ) : (
-                <a href="#/home">
-                  <Img src="logo.png" key="1" height={30} />
+                <a href="#/home" key="1">
+                  <Img src="logo.png" height={30} />
                 </a>
               ),
             ]}
@@ -67,7 +67,7 @@ export default class Header extends Component {
             {this.props.isFooter ? (
               <div style={{ textAlign: "right", width: "100%" }}>
                 <a href="#/home">
-                  <Img src="logo.png" key="3" height={30} />
+                  <Img src="logo.png" height={30} />
                 </a>
               </div>
             ) : (
