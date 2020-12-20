@@ -19,6 +19,11 @@ const defaultState = {
 
 // 请一个管理员，必须是一个函数
 const reduce = (state = defaultState, action) => {
+  if (action.type === "init_subject_data") {
+    let newState = JSON.parse(JSON.stringify(state));
+    newState.subject_data = action.value;
+    return newState;
+  }
   return state;
 };
 

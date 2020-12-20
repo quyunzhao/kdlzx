@@ -21,9 +21,11 @@ class Subject extends Component {
     axios.get("/server/subject.json").then((response) => {
       const subList = response.data;
       console.log(subList);
-      this.setState({
-        subject_data: subList,
-      });
+
+      this.props.init_subject_data(subList);
+      // this.setState({
+      //   subject_data: subList,
+      // });
     });
   }
 
@@ -77,4 +79,19 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(Subject);
+//事件写在 mapDispatchToProps 函数中
+const mapDispatchToProps = (dispatch) => {
+  return {
+    init_subject_data(subList) {
+      // 3. 调用 dispatch(action) ,将管理状态的方案传入当参数
+      let action = {
+        type: "init_subject_data",
+        // 这里其实修改的是 props 中的 myNum
+        value: subList,
+      };
+      dispatch(action); // 这个函数一执行会调用到 reduce
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Subject);
