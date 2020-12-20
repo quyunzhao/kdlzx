@@ -10,7 +10,13 @@
 
 // Redux
 // import "./test/text2Redux";
-import "./test/base1.jsx";
+
+// 用于测试 react-redux 渲染仓库数据到组件中
+// import "./test/base1.jsx";
+
+// 用于测试 react-redux 修改仓库数据
+import "./test/base2.jsx";
+
 // --------------------end----------
 
 // 引入初始化样式

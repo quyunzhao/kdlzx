@@ -23,4 +23,5 @@ const mapStateToProps = (state) => {
 };
 
 // 2.使用 connect 完成连接组件，并把 state 数据转换为 props 数据
+// connect(要展示数据的函数，改变数据的函数)
 export default connect(mapStateToProps, null)(App1);
