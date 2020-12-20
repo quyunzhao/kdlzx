@@ -12,7 +12,10 @@ export class FormBtn extends Component {
       // <button className={"btn " + (this.props.isFull ? "full" : "")}>
       //   {this.props.children}
       // </button>
-      <button className={`btn ${this.props.isFull ? "full" : ""}`}>
+      <button
+        className={`btn ${this.props.isFull ? "full" : ""}`}
+        onClick={this.props.onClick}
+      >
         {this.props.children}
       </button>
     );
