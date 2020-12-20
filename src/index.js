@@ -1,6 +1,6 @@
 // 入口文件，在项目中相当于清单
 // 引入核心组件
-// import "./pages/App";
+import "./pages/App";
 // --------------end------------
 
 // 测试组件
@@ -15,7 +15,7 @@
 // import "./test/base1.jsx";
 
 // 用于测试 react-redux 修改仓库数据
-import "./test/base2.jsx";
+// import "./test/base2.jsx";
 
 // --------------------end----------
 

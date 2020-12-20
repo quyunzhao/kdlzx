@@ -6,13 +6,15 @@ import "../assets/styles/subject.less";
 
 import axios from "axios";
 
-export default class Subject extends Component {
-  constructor(prop) {
-    super(prop);
-    this.state = {
-      subject_data: [],
-    };
-  }
+import { connect } from "react-redux";
+
+class Subject extends Component {
+  // constructor(prop) {
+  //   super(prop);
+  //   this.state = {
+  //     subject_data: [],
+  //   };
+  // }
 
   componentDidMount() {
     // 请求数据
@@ -30,7 +32,7 @@ export default class Subject extends Component {
       <div className="subject">
         {/* 第一行 */}
         <Flex>
-          {this.state.subject_data.map((v, k) => {
+          {this.props.subject_data.map((v, k) => {
             if (k < 4) {
               return (
                 <Flex.Item key={v.id}>
@@ -47,7 +49,7 @@ export default class Subject extends Component {
 
         {/* 第二行 */}
         <Flex>
-          {this.state.subject_data.map((v, k) => {
+          {this.props.subject_data.map((v, k) => {
             if (k > 3) {
               return (
                 <Flex.Item key={v.id}>
@@ -67,3 +69,12 @@ export default class Subject extends Component {
     );
   }
 }
+
+// 定义 state 数据转换为 props 数据的函数
+const mapStateToProps = (state) => {
+  return {
+    subject_data: state.subject_data,
+  };
+};
+
+export default connect(mapStateToProps, null)(Subject);
