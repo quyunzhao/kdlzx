@@ -26,13 +26,13 @@ export class LoginPage extends Component {
           <FormInput
             type="text"
             placeholder="用户名"
-            iconClass="shouji"
+            iconClass="jiayantubiao-06"
           ></FormInput>
           {/* 2.密码输入框 */}
           <FormInput
             type="password"
             placeholder="密码"
-            iconClass="Lock_icon"
+            iconClass="lock"
           ></FormInput>
           {/* 3.登录按钮 */}
           <Link to="/home">

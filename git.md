@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "路由配置"
+git commit -m "字体图标替换"
 
 git push

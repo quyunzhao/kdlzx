@@ -45,11 +45,11 @@ export class HomePage extends Component {
                   </h3>
                   <p>
                     <span>
-                      <i className="iconfont icon-shouji"></i>
+                      <i className="iconfont icon-fenxiang"></i>
                       2小时前
                     </span>
                     <span style={{ float: "right" }}>
-                      <i className="iconfont icon-Lock_icon"></i>
+                      <i className="iconfont icon-comment"></i>
                       63
                     </span>
                   </p>
@@ -85,11 +85,11 @@ export class HomePage extends Component {
                   </h3>
                   <p>
                     <span>
-                      <i className="iconfont icon-shouji"></i>
+                      <i className="iconfont icon-fenxiang"></i>
                       2小时前
                     </span>
                     <span style={{ float: "right" }}>
-                      <i className="iconfont icon-Lock_icon"></i>
+                      <i className="iconfont icon-jiayantubiao-08"></i>
                       63
                     </span>
                   </p>
@@ -124,11 +124,11 @@ export class HomePage extends Component {
                   </h3>
                   <p>
                     <span>
-                      <i className="iconfont icon-shouji"></i>
+                      <i className="iconfont icon-fenxiang"></i>
                       2小时前
                     </span>
                     <span style={{ float: "right" }}>
-                      <i className="iconfont icon-Lock_icon"></i>
+                      <i className="iconfont icon-dianhua"></i>
                       63
                     </span>
                   </p>

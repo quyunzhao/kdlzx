@@ -41,11 +41,11 @@ export default class DetailPage extends Component {
           </content>
           <p>
             <span>
-              <i className="iconfont icon-shouji"></i>
+              <i className="iconfont icon-browse"></i>
               635人观看
             </span>
             <span style={{ float: "right" }}>
-              <i className="iconfont icon-Lock_icon"></i>
+              <i className="iconfont icon-fabulous"></i>
               我要点赞
             </span>
           </p>
@@ -67,7 +67,7 @@ export default class DetailPage extends Component {
                 <span style={{ float: "right" }}>
                   3
                   <i
-                    className="iconfont icon-shouji"
+                    className="iconfont icon-zhengyan-21"
                     style={{ marginLeft: "6px" }}
                   ></i>
                 </span>
@@ -88,7 +88,7 @@ export default class DetailPage extends Component {
                 <span style={{ float: "right" }}>
                   5
                   <i
-                    className="iconfont icon-shouji"
+                    className="iconfont icon-zhengyan-21"
                     style={{ marginLeft: "6px" }}
                   ></i>
                 </span>
