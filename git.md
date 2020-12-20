@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "redux 介绍"
+git commit -m "react-redux 案例一"
 
 git push
