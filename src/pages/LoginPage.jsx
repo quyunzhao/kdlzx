@@ -14,6 +14,34 @@ import FormBtn from "../components/FormBtn";
 // const Img = require("../assets/images/logo192.png");
 // console.log(Img);
 export class LoginPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName: "",
+      password: "",
+    };
+
+    this.handleChangePWD = this.handleChangePWD.bind(this);
+  }
+
+  handleChangeName = (val) => {
+    const value = val.target.value;
+    console.log(value);
+    // 修改 this.state.userName
+    this.setState({
+      userName: value,
+    });
+  };
+
+  handleChangePWD(e) {
+    const pwd = e.target.value;
+    console.log(pwd);
+    // 修改 this.state.userName
+    this.setState({
+      password: pwd,
+    });
+  }
+
   render() {
     return (
       <div className="login-page">
@@ -26,13 +54,17 @@ export class LoginPage extends Component {
           <FormInput
             type="text"
             placeholder="用户名"
-            iconClass="jiayantubiao-06"
+            iconclass="jiayantubiao-06"
+            value={this.props.userName}
+            onChange={(val) => this.handleChangeName(val)}
           ></FormInput>
           {/* 2.密码输入框 */}
           <FormInput
             type="password"
             placeholder="密码"
-            iconClass="lock"
+            iconclass="lock"
+            value={this.props.password}
+            onChange={this.handleChangePWD}
           ></FormInput>
           {/* 3.登录按钮 */}
           <Link to="/home">

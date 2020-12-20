@@ -44,9 +44,11 @@ export default class Header extends Component {
           <NavBar
             mode="light"
             icon={<Icon type="left" />}
-            onLeftClick={() => console.log("onLeftClick")}
+            onLeftClick={() => window.history.back()}
           >
-            <Img src="logo.png" height={30} />
+            <a href="#/home">
+              <Img src="logo.png" key="0" height={30} />
+            </a>
           </NavBar>
         ) : (
           <NavBar
@@ -54,7 +56,9 @@ export default class Header extends Component {
               this.props.isFooter ? (
                 ""
               ) : (
-                <Img src="logo.png" key="0" height={30}></Img>
+                <a href="#/home">
+                  <Img src="logo.png" key="1" height={30} />
+                </a>
               ),
             ]}
             // icon={<Icon type="left" />}
@@ -62,7 +66,9 @@ export default class Header extends Component {
           >
             {this.props.isFooter ? (
               <div style={{ textAlign: "right", width: "100%" }}>
-                <Img src="logo.png" height={30} />
+                <a href="#/home">
+                  <Img src="logo.png" key="3" height={30} />
+                </a>
               </div>
             ) : (
               <SearchBar placeholder="Search" maxLength={8} />

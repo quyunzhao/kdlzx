@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "字体图标替换"
+git commit -m "登录页受控组件"
 
 git push
