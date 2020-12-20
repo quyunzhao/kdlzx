@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ListView } from "antd-mobile";
+import { ListView } from "antd-mobile/dist/antd-mobile.min";
 
 import SubListItem from "./SubListItem";
 

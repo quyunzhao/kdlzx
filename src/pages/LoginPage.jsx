@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router";
+
 import "../assets/styles/loginPage.less";
 
 // 引入图片组件
@@ -33,7 +35,9 @@ export class LoginPage extends Component {
             iconClass="Lock_icon"
           ></FormInput>
           {/* 3.登录按钮 */}
-          <FormBtn isFull={true}>登录</FormBtn>
+          <Link to="/home">
+            <FormBtn isFull={true}>登录</FormBtn>
+          </Link>
           {/* 4.忘记密码 */}
           <FormBtn type="ordinary">忘记密码</FormBtn>
           {/* 5.免费注册 游客登录 */}

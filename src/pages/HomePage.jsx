@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Flex, Tabs, List } from "antd-mobile";
+import { Flex, Tabs, List } from "antd-mobile/dist/antd-mobile.min";
 
 import "../assets/styles/homePage.less";
 import "../assets/fonts/iconfont.css";

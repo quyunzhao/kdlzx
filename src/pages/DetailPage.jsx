@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Flex } from "antd-mobile";
+import { Flex } from "antd-mobile/dist/antd-mobile.min";
 
 import "../assets/fonts/iconfont.css";
 import "../assets/styles/detailPage.less";

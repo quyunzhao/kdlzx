@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel } from "antd-mobile";
+import { Carousel } from "antd-mobile/dist/antd-mobile.min";
 
 import banner1 from "../assets/images/huijingshen.jpg";
 import banner2 from "../assets/images/banner2.png";
