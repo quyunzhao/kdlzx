@@ -67,6 +67,7 @@ export class LoginPage extends Component {
     axios.get("/server/data.json", params).then((response) => {
       if (response.data && response.data.succeed) {
         Toast.success(response.data.msg, 1);
+        console.log(response.data);
         // 跳转到首页
         this.props.router.push("/home");
       } else {

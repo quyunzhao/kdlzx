@@ -20,7 +20,7 @@ class Subject extends Component {
     // 请求数据
     axios.get("/server/subject.json").then((response) => {
       const subList = response.data;
-      console.log(subList);
+      // console.log(subList);
 
       this.props.init_subject_data(subList);
       // this.setState({
