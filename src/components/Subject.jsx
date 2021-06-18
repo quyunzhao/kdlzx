@@ -18,7 +18,7 @@ class Subject extends Component {
 
   componentDidMount() {
     // 请求数据
-    axios.get("/server/subject.json").then((response) => {
+    axios.get("/react/server/subject.json").then((response) => {
       const subList = response.data;
       // console.log(subList);
 

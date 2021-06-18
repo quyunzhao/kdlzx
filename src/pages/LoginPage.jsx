@@ -64,7 +64,7 @@ export class LoginPage extends Component {
     };
     // console.log("点击");
     // 发起登录请求
-    axios.get("/server/data.json", params).then((response) => {
+    axios.get("/react/server/data.json", params).then((response) => {
       if (response.data && response.data.succeed) {
         Toast.success(response.data.msg, 1);
         console.log(response.data);
