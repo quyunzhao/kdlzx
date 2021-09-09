@@ -1,7 +1,7 @@
 #!/bin/bash
 export LANG="en_US.UTF-8"
 
-msg="贪吃蛇添加游戏说明"
+msg="axios增加接口错误逻辑"
 
 if [ -n "${msg}" ]; then
     git pull

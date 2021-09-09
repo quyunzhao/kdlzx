@@ -64,16 +64,22 @@ export class LoginPage extends Component {
     };
     // console.log("点击");
     // 发起登录请求
-    axios.get("/react/server/data.json", params).then((response) => {
-      if (response.data && response.data.succeed) {
-        Toast.success(response.data.msg, 1);
-        console.log(response.data);
-        // 跳转到首页
+    axios
+      .get("/react/server/data.json", params)
+      .then((response) => {
+        if (response.data && response.data.succeed) {
+          Toast.success(response.data.msg, 1);
+          console.log(response.data);
+          // 跳转到首页
+          this.props.router.push("/home");
+        } else {
+          Toast.fail(response.data.msg, 1);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
         this.props.router.push("/home");
-      } else {
-        Toast.fail(response.data.msg, 1);
-      }
-    });
+      });
 
     // post 请求
     // 发起登录请求
